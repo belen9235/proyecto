@@ -17,21 +17,20 @@
 
 	include 'conexionbd.php';
 
-	$conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
-
+	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+	mysql_select_db($dbname, $conn);
 	// checar conexion
 	if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
+		die("Connection failed: " . mysql_connect_error());
 	}
 	
 	// consulta para comprobar si el correo electronico ya existe 
-	$checkEmail = "SELECT * FROM users WHERE Email = '$_POST[email]' ";
-
+	$checkEmail = "SELECT * FROM alumno WHERE email = '$_POST[email]' ";
 	//variable $resultado mantener los datos de conexión y la consulta
-	$result = $conn-> query($checkEmail);
-
+	// $result = $conn-> mysqli_query($checkEmail);
+	$result = mysql_query($checkEmail, $conn);
 	// Variable $count hold the result of the query.mantener el resultado de la consulta
-	$count = mysqli_num_rows($result);
+	$count = mysql_num_rows($result);
 
 	// If count == 1 Eso significa que el correo ya esta en la base de datos.
 	if ($count == 1) {
@@ -53,16 +52,16 @@
 
 	
 	// Query to send Name, Email and Password hash to the database.consulta para enviar hash de nombre,correo y contraseña ala bd
-	$query = "INSERT INTO users (Name, Email, Password) VALUES ('$name', '$email', '$passHash')";
+	$query = "INSERT INTO alumno (name, email, password) VALUES ('$name', '$email', '$pass')";
 
-	if (mysqli_query($conn, $query)) {
+	if (mysql_query($checkEmail, $conn)) {
 		echo "<div class='alert alert-success mt-4' role='alert'><h3>Your account has been created.</h3>
-		<a class='btn btn-outline-primary' href='login.html' role='button'>Login</a></div>";		
+		<a class='btn btn-outline-primary' href='index.html' role='button'>Login</a></div>";		
 		} else {
-			echo "Error: " . $query . "<br>" . mysqli_error($conn);
+			echo "Error: " . $query . "<br>" . mysql_error($conn);
 		}	
 	}	
-	mysqli_close($conn);
+	mysql_close($conn);
 	?>
 </div>
 	<!-- Optional JavaScript -->
