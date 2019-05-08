@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Formulario Alumnos</title>
+    
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" type="image/jpg" href="img/favicon.png"/>
+    <!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/estilo.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  </head>
+  <body>
+<div class="fondoalum">
+	
+		<h1>Registro para Alumnos</h1>
+  
+  <div class="container">
+			<a href="index.html" class="btn1 purple">Volver</a> 
+		<div class="row">
+			<div class="col-sm-12">
+				
+				<p>Realiza un registro y accede a la plataforma </p>		
+			</div>
+	</div>
+	
+	<div class="row">	
+		<div class="col-sm-12 col-md-6 col-lg-6">
+		
+		<h3>Crear cuenta</h3><hr />
+		
+		<form method="post" action="crear cuenta.php" method="POST"> 	
+			<div class="form-group">				
+				<input type="text" class="form-control cajas" name="name" id="nombre" placeholder="Nombre" required>			
+			</div>
+			<div class="form-group">				
+				<input type="text" class="form-control cajas" name="grupo" id="grupo" placeholder="Grupo" required>
+			</div>
+		  
+		  <div class="form-group">				
+				<input type="email" class="form-control cajas" name="email" aria-describedby="emailHelp" id="correo" placeholder="E-mail" required>
+			</div>
+		  
+		  <div class="form-group">				
+				<input type="password" class="form-control cajas" name="password" id="contra"placeholder="Contraseña" required>
+			</div>
+			
+		  
+		  <button type="submit" class="btn  btn-block color">Registrar</button>
+		</form>		
+		</div>		
+		<div class="col-sm-12 col-md-6 col-lg-6">
+			<h3>Iniciar Sesión</h3><hr/>
+			<p>¿Ya tienes una cuenta? <a href="loginAlum.html" title="Login Alumnos">¡Entre Aquí!</a></p>
+		</div>
+	</div>
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+ 
+	</body>
+</html>
