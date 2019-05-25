@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/jpg" href="img/favicon.png"/>
     <!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/estilo.css">
+		<link rel="stylesheet" href="css/estiloregistro.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body>
@@ -31,34 +31,77 @@
 		
 		<h3>Crear cuenta</h3><hr />
 		
-		<form method="post" action="crearcuenta.php" method="POST"> 	
+		<form  action="registroAlumnos.php" method="POST"> 	
+
+				<select name="grupo">	
+					
+						<option >-</option>			
+						<option value="grupoA">Grupo A </option>				
+						<option value="grupoB">Grupo B</option>
+						<option value="grupoC">Grupo C</option>
+						<option value="grupoD">Grupo D</option>
+					</select>
+					
+						<select name="generacion" required>	
+								<option>-</option>				
+							<option value="2010">2010</option>
+							<option value="2018">2018</option>					
+							<option value="2019">2019</option>					
+						</select>
 			<div class="form-group">				
-				<input type="text" class="form-control cajas" name="name" id="nombre" placeholder="Nombre" required>			
-			</div>
-			<div class="form-group">				
-				<input type="text" class="form-control cajas" name="grupo" id="grupo" placeholder="Grupo" required>
-			</div>
-		  
-		  <div class="form-group">				
-				<input type="email" class="form-control cajas" name="email" aria-describedby="emailHelp" id="correo" placeholder="E-mail" required>
-			</div>
-		  
-		  <div class="form-group">				
-				<input type="password" class="form-control cajas" name="password" id="contra"placeholder="Contraseña" required>
+				<input type="text" class="form-control cajas" name="nombre" id="nombre" placeholder="Nombre" required>			
 			</div>
 			
 		  
+		  <div class="form-group">				
+				<input type="email" class="form-control cajas" name="correo" aria-describedby="emailHelp" id="correo" placeholder="E-mail" required>
+			</div>
+		  
+		  <div class="form-group">				
+				<input type="password" class="form-control cajas" name="pass" id="pass"placeholder="Contraseña" required>
+			</div>
+			<div class="form-group">				
+				<input type="password" class="form-control cajas" name="rpass" id="rpass"placeholder="Contraseña" required>
+			</div>
+		
 		  <button type="submit" class="btn  btn-block color">Registrar</button>
-		</form>		
-		</div>		
+		</form>
+		
+		</div>
+		
+		
+		
+		
 		<div class="col-sm-12 col-md-6 col-lg-6">
 			<h3>Iniciar Sesión</h3><hr/>
-			<p>¿Ya tienes una cuenta? <a href="loginAlum.html" title="Login Alumnos">¡Entre Aquí!</a></p>
+				
+						<div class="card">
+							<div class="loginBox">
+								
+				
+	
+								<form action="validarusuarios.php" method="post">                           	
+									<div class="form-group">									
+										<input type="email" class="form-control input-lg cajas" name="mail" id="correo" placeholder="E-mail" required>        
+									</div>							
+									<div class="form-group">        
+										<input type="password" class="form-control input-lg cajas" name="pass" id="pass" placeholder="Contraseña" required>       
+									</div>								    
+										<button type="submit" class="btn color2 btn-block">Ingresar</button>
+								</form>
+												
+													
+							</div><!-- /.loginBox -->	
+						</div><!-- /.card -->
+					
 		</div>
 	</div>
 </div>
 </div>
-    <!-- Optional JavaScript -->
+
+		
+
+ 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

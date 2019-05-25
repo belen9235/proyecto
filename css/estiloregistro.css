@@ -9,13 +9,13 @@ body{
     height: auto;
     margin: 10px auto;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     background-color: rgba(255, 255, 255, 0.09);
 }
 /*fondo*/
 div.fondoprof{
     height: 100vh;
-    background-image: url("../img/col.jpg");
+    background-image: url("../img/color.jpg");
     background-position: center center;
     background-size: cover;
     overflow: hidden;
@@ -35,10 +35,13 @@ div.fondoalum{
 }
         
 div.container{
-    margin-top: 7%;
+    margin-top: 1%;
 }
 
 #nombre::-webkit-input-placeholder { /* Chrome, Opera ySafari */
+    color: white;
+  }
+  #usu::-webkit-input-placeholder { /* Chrome, Opera ySafari */
     color: white;
   }
   #grupo::-webkit-input-placeholder { /* Chrome, Opera ySafari */
@@ -48,9 +51,13 @@ div.container{
   #correo::-webkit-input-placeholder { /* Chrome, Opera ySafari */
     color: white;
   }
-  #contra::-webkit-input-placeholder { /* Chrome, Opera ySafari */
+  #pass::-webkit-input-placeholder { /* Chrome, Opera ySafari */
     color: white;
   }
+  #rpass::-webkit-input-placeholder { /* Chrome, Opera ySafari */
+    color: white;
+  }
+  
 
 /*color de boton registrar*/
 .color{
@@ -101,7 +108,7 @@ font-size: 20px;
     -moz-transition: .3s;
     -o-transition: .3s;
     display: inline-block;
-    margin-top: -10%;
+    margin-top: -5%;
     margin-left: -1%;
     position: absolute;
   }
