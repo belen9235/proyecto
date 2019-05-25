@@ -1,0 +1,5 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+
+RewriteRule ^([1-9a-zA-Z_-]*)$ sesion.php?url=$1
