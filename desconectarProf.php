@@ -1,0 +1,10 @@
+<?php 
+session_start();
+if($_SESSION['NombreProf']){	
+	session_destroy();
+	header("location:FormularioProf.html");
+}
+else{
+	header("location:FormularioProf.html");
+}
+?>
